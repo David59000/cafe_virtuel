@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: antiquewhite;
     max-width: 1400px;
     margin: auto;
 }
@@ -14,10 +13,14 @@ img {
 /* Header */
 
 header {
-    background-color: aquamarine;
+   
+}
+h2 {
+    text-align: center;
 }
 #imageCafe {
     width: 100%;
+    height: 500px;
 }
 .taille_img {
     width: 300px;
