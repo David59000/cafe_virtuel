@@ -45,3 +45,19 @@ li {
 h1 {
     background-color: aquamarine;
 }
+.reseauxSociaux {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+#logoLinkedin {
+    padding: 3px;
+}
+a:hover {
+    cursor: pointer;
+  }
+  h3 {
+    text-align: center;
+  }
