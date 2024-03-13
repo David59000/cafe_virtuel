@@ -36,3 +36,9 @@ li {
 #liste_des_cocktails {
     text-align: center;
 }
+#formulaire {
+    display: flex;
+}
+h1 {
+    background-color: aquamarine;
+}

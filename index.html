@@ -8,20 +8,23 @@
 </head>
 <body>
     <header>
-        <h1>Cocktails fruits frais</h1>
+        <h2>Le trio - Espace dédié aux trois cocktails de fruits frais les plus consommés au monde</h2>
         <div id="imageCafe">
             <img  src="./assets/images/0611010531945-web-tete.jpg" alt="image du café">
         </div>
     </header>
     <main>
+      <div>
         <section id="liste_des_cocktails">
+          <div>
             <ul id="container_cocktails">
                 <li>
                     <p>Ananas fraise pomme</p>
                     <div class="taille_img">
                       <img src="./assets/images/ananas_fraise_pomme.jpg" alt="">
                     </div>
-                    <span>Ananas, fraise, pomme. Issu de l'agriculture biologique.</span>
+                    <span>Ananas fraise pomme</span>
+                    <p>Issu de l'agriculture biologique</p>
                     <p>Prix : 4,90 €</p>
                 </li>
                 <li>
@@ -29,7 +32,8 @@
                     <div class="taille_img">
                       <img src="./assets/images/fraise_banane_kiwi_pomme.jpg" alt="">
                     </div>
-                    <span>Fraise, banane,kiwi. Issu de l'agriculture biologique.</span>
+                    <span>Fraise, banane,kiwi, pomme</span>
+                    <p>Issu de l'agriculture biologique</p>
                     <p>Prix : 4,90 €</p>
                 </li>
                 <li>
@@ -37,30 +41,149 @@
                     <div class="taille_img">
                       <img src="./assets/images/pomme_fraise_framboise_cassis.jpg" alt="">
                     </div>
-                    <span>Pomme, fraise, framboise, cassis. Issu de l'agriculture biologique.</span>
+                    <span>Pomme, fraise, framboise, cassis</span>
+                    <p>Issu de l'agriculture biologique</p>
                     <p>Prix : 4,90 €</p>
                 </li>
             </ul>
-        </section id="commande_en_ligne">
-        <form action="/ma-page-de-traitement" method="post">
-          <ul>
-            <li>
-              <label for="name">Nom&nbsp;:</label>
-              <input type="text" id="name" name="user_name" />
-            </li>
-            <li>
-              <label for="mail">E-mail&nbsp;:</label>
-              <input type="email" id="mail" name="user_mail" />
-            </li>
-            <li>
-              <label for="msg">Message&nbsp;:</label>
-              <textarea id="msg" name="user_message"></textarea>
-            </li>
-          </ul>
-        </form>
-        <section>
-
+          </div>
         </section>
+        <br>
+        <div>
+          <form>
+            <h1>Votre commande de cocktail</h1>
+      
+            <div>
+              <h2><i>Vos coordonnées</i></h2>
+              <div>
+                <!-- La balise <label> est un texte descriptif qui explique le but ou la signification d'un champ de formulaire. -->
+                <!-- On utilise la balise <label> pour améliorer l'accessibilité des formulaires. Car ça fournit une association explicite entre le un label et son champs. -->
+                <!-- L'attribut for sur la balise <label> et l'attribut name sur la balise <input> permet de faire cette liaison -->
+                <label for="nom"><b>Votre nom :*</b></label>
+                <br />
+      
+                <!-- La balise <input> est un champ de saisie dans les formulaires. Il existe differents inputs selon la valeur de l'attribut type -->
+                <!-- L'attribut type est utilisé pour déterminer le comportement et l'apparence du champ de saisie. Par defaut, la valeur est "text" qui affiche des chaines de caractères, du texte. -->
+                <!-- L'attribut placeholder est utilisé pour fournir un texte d'exemple ou une indication sur le type d'informations attendues -->
+                <!-- L'attribut required est utilisé pour indiquer que la saisie d'un champ est obligatoire -->
+                <input required name="nom" type="text" placeholder="Votre nom" />
+              </div>
+      
+              <!-- La balise div est une balise qui n'a aucun effet sur le visuel du site. Mais il permet d'encapsuler d'autres balises pour plusieurs raisons :
+                - La mise en forme : La balise <div> est souvent utilisée pour regrouper des balises afin de leur appliquer des styles CSS communs. Ici nous pourrons styliser l'ensemble ou les positionner d'une manière particulière grace à CSS. 
+                - La structuration : La balise <div> peut aider à organiser le code en créant une structure logique. Ici, je souhaite ranger mes balises qui ont un rapport avec le prénom.
+              -->
+              <div>
+                <label for="prenom"><b>Votre prénom :*</b></label>
+                <br />
+                <input required name="prenom" type="text" placeholder="James" />
+              </div>
+              <div>
+                <label for="mail"><b>Adresse e-mail :*</b></label>
+                <br />
+                <input required name="mail" type="email" />
+              </div>
+            </div>
+      
+            <!-- Ici j'utlise une <div> pour englober tout ce qui a un lien avec l'option sur la voiture -->
+            <div>
+              <h2><i>Options de votre cocktail :</i></h2>
+      
+              <div>
+                <label for="date"><b>date de votre passage :*</b></label>
+                <br />
+                <input name="date" type="date" />
+              </div>
+      
+              <div>
+                <label for="type_cocktail"><b>Choix du coktail :*</b></label>
+                <br />
+                <!-- Les balises <select> et <option> sont des balises utilisées pour créer des listes déroulantes.  -->
+                <!-- <select> crée la structure de la liste déroulante. <option> crée les differents éléments qui composent la liste. -->
+                <select name="type_cocktail">
+                  <option value="">--type Cocktail--</option>
+                  <option value="cocktail1">Ananas fraise pomme</option>
+                  <option selected value="cocktail2">Fraise banane kiwi pomme</option>
+                  <option value="cocktail3">Pomme fraise framboise cassis</option>
+                </select>
+              </div>
+      
+              <div>
+                <label for="type_contenant"><b>Choix contenant :</b></label>
+                <br />
+      
+                <div>
+                  <!-- La valeur radio de l'attribut type crée un bouton radio. Un bouton radio est un élément de formulaire qui permet de faire une seule et unique sélection parmi un groupe d'options. -->
+                  <input name="type_contenant" type="radio" />
+                  <label>Première gourde isotherme pour commander des recharges par la suite</label>
+                </div>
+      
+                <div>
+                  <input name="type_contenant" type="radio" />
+                  <label>Recharge car je dispose déjà de ma gourde TRIO</label>
+                </div>
+      
+                <div>
+                  <label><b>Option :</b></label>
+                  <br />
+      
+                  <div>
+                    <!-- La valeur checkbox de l'attribut type crée une case à cocher. Une case à cocher est un élément de formulaire qui permet de faire une ou plusieurs sélections parmi un groupe d'options. -->
+                    <input type="checkbox" />
+                    <label>Gourde de voyage</label>
+                  </div>
+      
+                  <div>
+                    <input type="checkbox" />
+                    <label>10 recharges</label>
+                  </div>
+      
+                  <div>
+                    <input type="checkbox" />
+                    <label>5 recharges</label>
+                  </div>
+                </div>
+              </div>
+      
+              <div>
+                <label><b>Couleur de ma gourde :</b></label>
+                <br />
+                <input type="color" value="#0000FF" />
+              </div>
+            </div>
+      
+            <!-- La valeur submit de l'attribut type est utilisée pour créer un bouton de soumission dans un formulaire. Grâce à ce bouton, il sera possible d'envoyer les données ajoutées dans les divers input/select/textarea. -->
+            <input type="submit" />
+          </form>
+        <!-- <div id="formulaire>
+          <form"action="/ma-page-de-traitement" method="post">
+            <ul>
+              <li class="commandeChampsFormulaire">
+               <label for="name">Nom&nbsp;:</label>
+               <input type="text" id="name" name="user_name" />
+              </li>
+              <li class="commandeChampsFormulaire">
+                <label for="name">Commande&nbsp;:</label>
+                <select type="text" name="user_name" />
+                  <option> Annana fraise pomme avec gourde isoterme rechargeable - 14,90€</option>
+                  <option> Fraise banane kiwi pomme avec gourde isoterme rechargeable - 14,90€</option>
+                  <option> Pomme fraise framboise cassis avec gourde isoterme rechargeable - 14,90€</option>
+              </li>
+              <li class="commandeChampsFormulaire">
+                <label for="mail">E-mail&nbsp;:</label>
+                  <input type="email" id="mail" name="user_mail" />
+              </li>
+              <li class="commandeChampsFormulaire">
+                <label for="msg">Message&nbsp;:</label>
+                <textarea id="msg" name="user_message"></textarea>
+              </li>
+            </ul>
+            <div class="button">
+              <button type="submit">Commander</button>
+            </div>
+          </form> -->
+        <!-- </div></div> -->
+    </div>
     </main>
     
 </body>
